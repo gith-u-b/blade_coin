@@ -6,12 +6,12 @@ require "blade_coin/version"
 Gem::Specification.new do |spec|
   spec.name          = "blade_coin"
   spec.version       = BladeCoin::VERSION
-  spec.authors       = ["sai"]
+  spec.authors       = ["sai1024"]
   spec.email         = ["rubyer1993@gmail.com"]
 
   spec.summary       = "blade coin, like query btc price."
   spec.description   = "blade coin, like query btc price."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/sai1024/blade_coin"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

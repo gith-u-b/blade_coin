@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/blade/coin'
+
+help = <<HELP
+coin: Translate tools in the command line
+  $ coin symbol
+  $ coin
+  > enter the loop mode, ctrl+c to exit
+HELP
+
+if ARGV.empty?
+  begin
+    loop do
+      print '> '
+      input = gets.chomp
+      next if input == ''
+      puts Blade::Coin.new(input).result
+    end
+  rescue Interrupt
+    puts 'bye bye'
+  end
+elsif %w{-h --help}.any? { |c| ARGV.include? c }
+  puts help
+else
+  puts Blade::Coin.new(ARGV.join(' ')).result
+end

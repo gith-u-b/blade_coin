@@ -1,6 +1,6 @@
 # BladeCoin
 
-command line coin 
+command line coin
 
 ## Installation
 
@@ -15,17 +15,19 @@ And then execute:
     $ bundle
 
 Or install it yourself as:
-    
-    $ gem install rainbow
-    
+
     $ gem install blade_coin
+
+If there is an error, execute:
+
+   $ gem install rainbow
 
 ## Usage
 
 like `btc`
 
 ```
-coin btc 
+coin btc
 ```
 
 result:

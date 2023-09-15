@@ -6,12 +6,12 @@ require "blade/coin/version"
 Gem::Specification.new do |spec|
   spec.name          = "blade_coin"
   spec.version       = Blade::Coin::VERSION
-  spec.authors       = ["sai1024"]
+  spec.authors       = ["sai"]
   spec.email         = ["rubyer1993@gmail.com"]
 
   spec.summary       = "blade coin, like query btc price."
   spec.description   = "blade coin, like query btc price."
-  spec.homepage      = "https://github.com/sai1024/blade_coin"
+  spec.homepage      = "https://github.com/gith-u-b/blade_coin"
   spec.license       = "MIT"
 
   # Specify which files should be added to the gem when it is released.

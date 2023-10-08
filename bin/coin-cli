@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/blade/coin'
+
+if ARGV.empty?
+  begin
+    loop do
+      print '> '
+      input = gets.chomp
+      next if input == ''
+      puts Blade::Coin.new(input).result
+    end
+  rescue Interrupt
+    puts 'bye bye'
+  end
+else
+  puts Blade::Coin.new(ARGV.join(' ')).result
+end

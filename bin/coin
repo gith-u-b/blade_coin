@@ -3,25 +3,22 @@
 require_relative '../lib/blade/coin'
 
 help = <<HELP
-coin: Translate tools in the command line
-  $ coin symbol
-  $ coin
+coin: 💰 A cryptocurrency price monitoring tools in the command line
+  $ coin symbol   Find specific coin(s), eg: coin btc
+  $ coin          To check the top 10 cryptocurrencies ranked by their market cap
+  $ coin -t [top] To query and display the number of cryptocurrencies ranked by market cap based on the 'top' parameter you input 
+  $ coin-cli      Coin's CLI, you can quickly query the symbol you want to search for
   > enter the loop mode, ctrl+c to exit
 HELP
 
 if ARGV.empty?
-  begin
-    loop do
-      print '> '
-      input = gets.chomp
-      next if input == ''
-      puts Blade::Coin.new(input).result
-    end
-  rescue Interrupt
-    puts 'bye bye'
-  end
+  puts Blade::Coin.new('').get_top_markets
 elsif %w{-h --help}.any? { |c| ARGV.include? c }
   puts help
+elsif %w{-t --top}.any? { |c| ARGV.include? c }
+  index = ARGV.index('-t') || ARGV.index('--top')
+  top = ARGV[index + 1].to_i
+  puts Blade::Coin.new('').get_top_markets(top)
 else
   puts Blade::Coin.new(ARGV.join(' ')).result
 end

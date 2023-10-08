@@ -9,14 +9,12 @@ Gem::Specification.new do |spec|
   spec.authors       = ["sai"]
   spec.email         = ["rubyer1993@gmail.com"]
 
-  spec.summary       = "blade coin, like query btc price."
-  spec.description   = "blade coin, like query btc price."
+  spec.summary       = "A cryptocurrency price monitoring tool"
+  spec.description   = "A cryptocurrency price monitoring tool, you can run 'coin -h' for more help, or read the 'README.md'."
   spec.homepage      = "https://github.com/gith-u-b/blade_coin"
   spec.license       = "MIT"
-  spec.add_dependency 'rainbow'
-
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
+  spec.add_dependency 'rainbow', "~> 2.1.0"
+  spec.add_dependency 'terminal-table', '~> 3.0', '>= 3.0.2'
 
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

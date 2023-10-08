@@ -1,6 +1,6 @@
 # BladeCoin
 
-command line coin
+💰 A cryptocurrency price monitoring tool
 
 ## Installation
 

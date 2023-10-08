@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/gith-u-b/blade_coin"
   spec.license       = "MIT"
   spec.add_dependency 'rainbow', "~> 2.1.0"
-  spec.add_dependency 'terminal-table', '~> 3.0', '>= 3.0.2'
+  spec.add_dependency 'terminal-table', '~> 1.8'
 
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

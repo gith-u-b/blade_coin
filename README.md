@@ -18,10 +18,6 @@ Or install it yourself as:
 
     $ gem install blade_coin
 
-If there is an error, execute:
-
-   $ gem install rainbow
-
 ## Usage
 
 like `btc`

@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = "blade coin, like query btc price."
   spec.homepage      = "https://github.com/gith-u-b/blade_coin"
   spec.license       = "MIT"
+  spec.add_dependency 'rainbow'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

@@ -50,16 +50,10 @@ module Blade
       table
     end
 
-    def green_colorize(str)
-      colorize(str, :green)
-    end
-
-    def orange_colorize(str)
-      colorize(str, :orange)
-    end
-
-    def yellow_colorize(str)
-      colorize(str, :yellow)
+    def method_missing(method, arg)
+      return super unless method.to_s.end_with?('_colorize')
+      color = method.to_s.gsub('_colorize', '').to_sym
+      send :colorize, arg, color
     end
 
     def usdt_result

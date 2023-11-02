@@ -31,7 +31,7 @@ module Blade
 
       display_market_data(data)
     end
-    
+
     def display_market_data(data)
       title = '💰Wishing you prosperity and wealth(恭喜发财)💰'.color(226)
       table = Terminal::Table.new(title: "\e[33m#{title}\e[0m") do |t|
@@ -50,16 +50,10 @@ module Blade
       table
     end
 
-    def green_colorize(str)
-      colorize(str, :green)
-    end
-
-    def orange_colorize(str)
-      colorize(str, :orange)
-    end
-
-    def yellow_colorize(str)
-      colorize(str, :yellow)
+    def method_missing(method, arg)
+      return super unless method.to_s.end_with?('_colorize')
+      color = method.to_s.gsub('_colorize', '').to_sym
+      send :colorize, arg, color
     end
 
     def usdt_result

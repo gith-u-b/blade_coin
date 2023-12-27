@@ -57,6 +57,19 @@ You can use the `-h` (or `--help`) to find all valid options of coin
 $ coin -h
 ```
 
+# Donate
+
+<div style="display: flex; gap: 20px;">
+    <div style="text-align: center">
+        <img style="width: 200px" src="./wechat.jpg" alt="微信" />
+        <p>WeChat Pay</p>
+    </div>
+    <div style="text-align: center">
+        <img style="width: 200px" src="./alipay.jpg" alt="支付宝" />
+        <p>Alipay</p>
+    </div>
+</div>
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/gith-u-b/blade_coin. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
